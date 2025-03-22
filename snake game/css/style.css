@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/1.png"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: transparent;
+    backdrop-filter:blur(15px);
+    width: 90vmin;
+    height: 92vmin;
+    border: 5px solid rgb(212, 218, 38);
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background:url("../img/face.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: .25vmin solid black; 
+    transform: scale(1.02);
+    border-radius: 25%;
+}
+
+.snake{
+    background:url("../img/skin.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: .25vmin solid black;
+    border-radius: 33%;
+}
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+.sound-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: rgb(8, 7, 7);
+  }
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    
+    background:none;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
