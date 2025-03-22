@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('tttbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+#view {
+    margin-top: 70px;
+}
+
+#mazeContainer {
+    top: 25px;
+    opacity: 0;  
+    backdrop-filter: blur(20px); 
+    display: inline-block;
+    margin: auto;
+    border-radius: 0px;
+}
+
+#mazeContainer #mazeCanvas {
+    margin: 0;
+    display: block;
+    border-radius: 0px;
+    border: solid 5px rgb(244, 240, 240);
+    height: 800px;
+}
+
+input, select {
+    cursor: pointer;
+    background-color: rgba(36, 232, 176, 0.742);
+    height: 70px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+}
+
+input:hover, select:hover {
+    background-color: rgba(6, 20, 179, 0.63);
+}
+
+input:active, select:active {
+    background-color: rgb(243, 240, 240);
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+.custom-select {
+    display: inline-block;
+}
+
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
+
+#Message-Container {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+
+#Message-Container #message {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+#page {
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#page #menu {
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+}
+
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+.border {
+    border: 50px rgb(239, 233, 233) solid;
+    border-radius: 10px;
+}
+
+#instructions {
+    margin-top: 889px;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    color: white;
+    background-color:transparent;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 70px; 
+}
+
+/* Music Button */
+#musicBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+}
+
