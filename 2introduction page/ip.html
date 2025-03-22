@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="ip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h2 class="logo"><i class="fa fa-gamepad" style="font-size:68px;color:aliceblue"></i> Web Arcade</h2>
+        <div class="typewriter">
+            <p class="type" style="font-size: 36px;"></p>
+            <p class="type"></p>
+            <p class="type"></p>
+        </div>
+        <div class="button-container">
+            <a href="http://127.0.0.1:5502/3games%20page/gamepage.html" class="btn"><i class="fa fa-solid fa-rocket"></i></a>
+        </div>
+    </div>
+    <script>
+        const texts = [
+            'Welcome to Web Arcade',
+            '-Where Vintage Classics & Modern Marvels Converge!',
+            'Experience the perfect blend of nostalgia and innovation in our digital arcade hall.'
+        ];
+
+        const delay = 35;
+
+        const typeText = (text, element, index = 0) => {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                setTimeout(() => typeText(text, element, index + 1), delay);
+            } else {
+               
+                const nextLine = element.nextElementSibling;
+                if (nextLine && !nextLine.classList.contains('typed')) {
+                    setTimeout(() => {
+                        nextLine.style.opacity = '1'; 
+                        nextLine.classList.add('typed'); 
+                        typeText(nextLine.textContent.trim(), nextLine); 
+                    }, delay); 
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const typeElements = document.querySelectorAll('.typewriter .type');
+            typeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1'; 
+                    typeText(texts[index], element); 
+                }, index * delay * texts[index].length); 
+            });
+        });
+    </script>
+</body>
+
+</html>
