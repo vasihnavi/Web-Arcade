@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('Images/md2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-images {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.slider-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.slider-img {
+  width: 150px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.7s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child {
+  height: 410px;
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(5) {
+  height: 500px;
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4) {
+  height: 620px;
+}
+
+h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  transform: rotate(270deg);
+  transition: 0.7s ease;
+}
+
+.details {
+  position: absolute;
+  bottom: 43px;
+  left: 43px;
+}
+
+.details h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 44px;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.7s ease;
+  display: none;
+}
+
+.details p {
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 33px;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.7s ease;
+  display: none;
+}
+
+.slider-img.active {
+  width: 766px !important;
+  height: 750px !important;
+}
+
+.slider-img.active h2 {
+  display: none;
+}
+
+.slider-img.active .details p, .slider-img.active .details h2 {
+  display: block;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 60px;
+  color: white;
+  margin-left: 1%;
+  color: white;
+}
+
+.logo i {
+  margin-right:20px;
+}
+
+.slider-button {
+  position: absolute;
+  bottom: 0.5px;
+  left: 180px;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #060607;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  transition: background-color 0.3s ease;
+  opacity: 0; /* Initially hide the button */
+}
+
+.slider-img.active .slider-button {
+  opacity: 1; /* Show the button when active */
+}
+
+.slider-button:hover {
+  background-color: #66c9a6;
+}
+
+.music-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 51px;
+  transition: background-color 0.3s ease;
+  }
+  .back-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #752dda;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+    border: 2px solid white;
+    top: 50%; 
+    left: 20px; /* Ensure it's within the viewport */
+    z-index: 1000; /* Make sure it's on top of other elements */
+  }
+    
+  
+  

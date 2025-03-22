@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game_page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="main">
+  <h1 class="logo"><i class="fa fa-gamepad" style="font-size: 65px; color: white"></i>Web Arcade</h1>
+</div>
+
+<section class="slider-container">
+  <div class="slider-images">
+    <div class="slider-img">
+      <img src="Images/1.jpg" alt="1" />
+      <h2>Hangman</h2>
+      <div class="details">
+        <h3>Hangman</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/hangman%20game/hangman.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+    <div class="slider-img">
+      <img src="Images/5.png" alt="2" />
+      <h2> Snake_Game</h2>
+      <div class="details">
+        <h3>Snake Game</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/snake%20game/snake.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+    <div class="slider-img">
+      <img src="Images/2.png" alt="3" />
+      <h2>Maze_Game</h2>
+      <div class="details">
+        <h3>Maze Game</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/Maze-Game-main/index.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+    <div class="slider-img active">
+      <img src="Images/4.png" alt="4" />
+      <h2>Tic_Tac_Toe</h2>
+      <div class="details">
+        <h3>Tic-Tac-Toe</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/tic-tac-toe%20game/t.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+    <div class="slider-img">
+      <img src="Images/3.png" alt="5" />
+      <h2>Connect_4</h2>
+      <div class="details">
+        <h3>Connect_4</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/connect4/index.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+    <div class="slider-img">
+      <img src="Images/6.png" alt="6" />
+      <h2>Memory_Card</h2>
+      <div class="details">
+        <h3>Memory Card Game</h3>
+        <p>Let's Play!</p>
+        <a href="http://127.0.0.1:5502/memorycard/index.html" class="slider-button"><i class="fa fa-gamepad"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<a href="http://127.0.0.1:5502/2introduction%20page/ip.html" class="back-button"><i class="fa fa-arrow-left"></i></a>
+<button class="music-button"><i class="fa fa-volume-up"></i></button>
+<audio id="background-music" loop autoplay>
+  <source src="main page music game.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/jQuery.js"></script>
+<script>
+  jQuery(document).ready(function ($) {
+    $(".slider-img").on("click", function () {
+      $(".slider-img").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    let musicPlaying = true;
+    const musicButton = document.querySelector('.music-button');
+    const backgroundMusic = document.getElementById('background-music');
+
+    musicButton.addEventListener('click', () => {
+      musicPlaying = !musicPlaying;
+      if (musicPlaying) {
+        backgroundMusic.play();
+        musicButton.innerHTML = '<i class="fa fa-volume-up"></i>';
+      } else {
+        backgroundMusic.pause();
+        musicButton.innerHTML = '<i class="fa fa-volume-off"></i>';
+      }
+    });
+  });
+</script>
+</body>
+</html>
